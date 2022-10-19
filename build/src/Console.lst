@@ -1,0 +1,174 @@
+GAS LISTING /tmp/cco5MinZ.s 			page 1
+
+
+   1              		.file	"Console.cpp"
+   2              		.option pic
+   3              		.option norelax
+   4              		.text
+   5              	.Ltext0:
+   6              		.align	2
+   7              		.globl	_ZN7Console4getcEv
+   9              	_ZN7Console4getcEv:
+  10              	.LFB35:
+  11              		.file 1 "src/Console.cpp"
+   1:src/Console.cpp **** //
+   2:src/Console.cpp **** // Created by os on 8/22/22.
+   3:src/Console.cpp **** //
+   4:src/Console.cpp **** #include "../h/syscall_cpp.hpp"
+   5:src/Console.cpp **** 
+   6:src/Console.cpp **** char Console::getc() {
+  12              		.loc 1 6 22
+  13              		.cfi_startproc
+  14 0000 130101FF 		addi	sp,sp,-16
+  15              		.cfi_def_cfa_offset 16
+  16 0004 23341100 		sd	ra,8(sp)
+  17 0008 23308100 		sd	s0,0(sp)
+  18              		.cfi_offset 1, -8
+  19              		.cfi_offset 8, -16
+  20 000c 13040101 		addi	s0,sp,16
+  21              		.cfi_def_cfa 8, 0
+   7:src/Console.cpp ****     return ::getc();
+  22              		.loc 1 7 5
+  23              		.loc 1 7 18 is_stmt 0
+  24 0010 97000000 		call	_Z4getcv@plt
+  24      E7800000 
+  25              	.LVL0:
+   8:src/Console.cpp **** }
+  26              		.loc 1 8 1
+  27 0018 83308100 		ld	ra,8(sp)
+  28              		.cfi_restore 1
+  29 001c 03340100 		ld	s0,0(sp)
+  30              		.cfi_restore 8
+  31              		.cfi_def_cfa 2, 16
+  32 0020 13010101 		addi	sp,sp,16
+  33              		.cfi_def_cfa_offset 0
+  34 0024 67800000 		jr	ra
+  35              		.cfi_endproc
+  36              	.LFE35:
+  38              		.align	2
+  39              		.globl	_ZN7Console4putcEc
+  41              	_ZN7Console4putcEc:
+  42              	.LFB36:
+   9:src/Console.cpp **** 
+  10:src/Console.cpp **** void Console::putc(char c) {
+  43              		.loc 1 10 28 is_stmt 1
+  44              		.cfi_startproc
+  45              	.LVL1:
+  46 0028 130101FF 		addi	sp,sp,-16
+  47              		.cfi_def_cfa_offset 16
+  48 002c 23341100 		sd	ra,8(sp)
+  49 0030 23308100 		sd	s0,0(sp)
+GAS LISTING /tmp/cco5MinZ.s 			page 2
+
+
+  50              		.cfi_offset 1, -8
+  51              		.cfi_offset 8, -16
+  52 0034 13040101 		addi	s0,sp,16
+  53              		.cfi_def_cfa 8, 0
+  11:src/Console.cpp ****     ::putc(c);
+  54              		.loc 1 11 5
+  55              		.loc 1 11 11 is_stmt 0
+  56 0038 97000000 		call	_Z4putcc@plt
+  56      E7800000 
+  57              	.LVL2:
+  12:src/Console.cpp **** }
+  58              		.loc 1 12 1
+  59 0040 83308100 		ld	ra,8(sp)
+  60              		.cfi_restore 1
+  61 0044 03340100 		ld	s0,0(sp)
+  62              		.cfi_restore 8
+  63              		.cfi_def_cfa 2, 16
+  64 0048 13010101 		addi	sp,sp,16
+  65              		.cfi_def_cfa_offset 0
+  66 004c 67800000 		jr	ra
+  67              		.cfi_endproc
+  68              	.LFE36:
+  70              	.Letext0:
+  71              		.file 2 "src/../h/../lib/hw.h"
+  72              		.file 3 "src/../h/syscall_c.h"
+  73              		.file 4 "src/../h/syscall_cpp.hpp"
+GAS LISTING /tmp/cco5MinZ.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 Console.cpp
+     /tmp/cco5MinZ.s:9      .text:0000000000000000 _ZN7Console4getcEv
+     /tmp/cco5MinZ.s:13     .text:0000000000000000 .L0 
+     /tmp/cco5MinZ.s:14     .text:0000000000000000 .L0 
+     /tmp/cco5MinZ.s:15     .text:0000000000000004 .L0 
+     /tmp/cco5MinZ.s:18     .text:000000000000000c .L0 
+     /tmp/cco5MinZ.s:19     .text:000000000000000c .L0 
+     /tmp/cco5MinZ.s:21     .text:0000000000000010 .L0 
+     /tmp/cco5MinZ.s:23     .text:0000000000000010 .L0 
+     /tmp/cco5MinZ.s:24     .text:0000000000000010 .L0 
+     /tmp/cco5MinZ.s:27     .text:0000000000000018 .L0 
+     /tmp/cco5MinZ.s:28     .text:000000000000001c .L0 
+     /tmp/cco5MinZ.s:30     .text:0000000000000020 .L0 
+     /tmp/cco5MinZ.s:31     .text:0000000000000020 .L0 
+     /tmp/cco5MinZ.s:33     .text:0000000000000024 .L0 
+     /tmp/cco5MinZ.s:35     .text:0000000000000028 .L0 
+     /tmp/cco5MinZ.s:41     .text:0000000000000028 _ZN7Console4putcEc
+     /tmp/cco5MinZ.s:44     .text:0000000000000028 .L0 
+     /tmp/cco5MinZ.s:46     .text:0000000000000028 .L0 
+     /tmp/cco5MinZ.s:47     .text:000000000000002c .L0 
+     /tmp/cco5MinZ.s:50     .text:0000000000000034 .L0 
+     /tmp/cco5MinZ.s:51     .text:0000000000000034 .L0 
+     /tmp/cco5MinZ.s:53     .text:0000000000000038 .L0 
+     /tmp/cco5MinZ.s:55     .text:0000000000000038 .L0 
+     /tmp/cco5MinZ.s:56     .text:0000000000000038 .L0 
+     /tmp/cco5MinZ.s:59     .text:0000000000000040 .L0 
+     /tmp/cco5MinZ.s:60     .text:0000000000000044 .L0 
+     /tmp/cco5MinZ.s:62     .text:0000000000000048 .L0 
+     /tmp/cco5MinZ.s:63     .text:0000000000000048 .L0 
+     /tmp/cco5MinZ.s:65     .text:000000000000004c .L0 
+     /tmp/cco5MinZ.s:67     .text:0000000000000050 .L0 
+     /tmp/cco5MinZ.s:74     .text:0000000000000050 .L0 
+     /tmp/cco5MinZ.s:283    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+     /tmp/cco5MinZ.s:612    .debug_str:00000000000000c9 .LASF23
+     /tmp/cco5MinZ.s:608    .debug_str:00000000000000a7 .LASF24
+     /tmp/cco5MinZ.s:622    .debug_str:00000000000001c5 .LASF25
+     /tmp/cco5MinZ.s:5      .text:0000000000000000 .Ltext0
+     /tmp/cco5MinZ.s:70     .text:0000000000000050 .Letext0
+     /tmp/cco5MinZ.s:580    .debug_line:0000000000000000 .Ldebug_line0
+     /tmp/cco5MinZ.s:614    .debug_str:000000000000018d .LASF0
+     /tmp/cco5MinZ.s:602    .debug_str:000000000000007f .LASF1
+     /tmp/cco5MinZ.s:596    .debug_str:0000000000000059 .LASF2
+     /tmp/cco5MinZ.s:588    .debug_str:000000000000002b .LASF4
+     /tmp/cco5MinZ.s:610    .debug_str:00000000000000b7 .LASF3
+     /tmp/cco5MinZ.s:584    .debug_str:000000000000000e .LASF5
+     /tmp/cco5MinZ.s:636    .debug_str:0000000000000233 .LASF6
+     /tmp/cco5MinZ.s:592    .debug_str:0000000000000037 .LASF7
+     /tmp/cco5MinZ.s:618    .debug_str:000000000000019f .LASF8
+     /tmp/cco5MinZ.s:582    .debug_str:0000000000000000 .LASF9
+     /tmp/cco5MinZ.s:638    .debug_str:0000000000000246 .LASF10
+     /tmp/cco5MinZ.s:594    .debug_str:000000000000004a .LASF11
+     /tmp/cco5MinZ.s:632    .debug_str:000000000000021a .LASF12
+     /tmp/cco5MinZ.s:624    .debug_str:00000000000001ea .LASF13
+     /tmp/cco5MinZ.s:606    .debug_str:000000000000009b .LASF14
+     /tmp/cco5MinZ.s:586    .debug_str:0000000000000015 .LASF15
+     /tmp/cco5MinZ.s:620    .debug_str:00000000000001af .LASF16
+GAS LISTING /tmp/cco5MinZ.s 			page 4
+
+
+     /tmp/cco5MinZ.s:616    .debug_str:000000000000019a .LASF17
+     /tmp/cco5MinZ.s:590    .debug_str:0000000000000032 .LASF18
+     /tmp/cco5MinZ.s:626    .debug_str:00000000000001fa .LASF26
+     /tmp/cco5MinZ.s:598    .debug_str:0000000000000067 .LASF22
+     /tmp/cco5MinZ.s:630    .debug_str:0000000000000207 .LASF27
+     /tmp/cco5MinZ.s:628    .debug_str:0000000000000202 .LASF21
+     /tmp/cco5MinZ.s:600    .debug_str:000000000000006c .LASF28
+     /tmp/cco5MinZ.s:42     .text:0000000000000028 .LFB36
+     /tmp/cco5MinZ.s:68     .text:0000000000000050 .LFE36
+     /tmp/cco5MinZ.s:553    .debug_loc:0000000000000000 .LLST0
+     /tmp/cco5MinZ.s:57     .text:0000000000000040 .LVL2
+     /tmp/cco5MinZ.s:10     .text:0000000000000000 .LFB35
+     /tmp/cco5MinZ.s:36     .text:0000000000000028 .LFE35
+     /tmp/cco5MinZ.s:25     .text:0000000000000018 .LVL0
+     /tmp/cco5MinZ.s:604    .debug_str:0000000000000092 .LASF19
+     /tmp/cco5MinZ.s:634    .debug_str:000000000000022a .LASF20
+     /tmp/cco5MinZ.s:45     .text:0000000000000028 .LVL1
+     /tmp/cco5MinZ.s:75     .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+_Z4getcv
+_Z4putcc
